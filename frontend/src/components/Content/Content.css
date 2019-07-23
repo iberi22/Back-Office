@@ -4,6 +4,4 @@
 	float            : left;
 	top              : 60px;
 	height           : calc(100% - 60px);
-	overflow-x       : auto;
-	position         : initial;
 }

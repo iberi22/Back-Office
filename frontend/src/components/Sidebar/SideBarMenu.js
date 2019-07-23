@@ -9,7 +9,7 @@ class SideBarMenu extends Component {
 
   render() {
 		return(
-	      <li ><i class="material-icons">{this.props.params.icon}</i>{this.props.params.text}</li>
+	      <li ><i className="material-icons">{this.props.params.icon}</i>{this.props.params.text}</li>
 		);
   	}
 

@@ -6,11 +6,11 @@ class Sidebar extends Component {
 
   constructor(props){
   	super(props);
-  	
+
   	let options = [
   		{
   			icon : 'dashboard',
-  			text : 'Dashboard'
+  			text : 'Dashboard',
   		},
   		{
   			icon : 'settings',
@@ -18,9 +18,10 @@ class Sidebar extends Component {
   		}
   	]
   	,	arrayOptions = []
-
+  	,	i = 1
     options.forEach(function(element) {
-      arrayOptions.push(<SidebarMenu params={element} />);
+      arrayOptions.push(<SidebarMenu key={i} params={element} />);
+      i++
 	  // console.log(element);
     });
     this.state = {
