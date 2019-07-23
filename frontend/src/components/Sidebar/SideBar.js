@@ -6,9 +6,7 @@ class Sidebar extends Component {
 
   constructor(props){
   	super(props);
-  	this.state = {
-  		options : '',
-  	}
+  	
   	let options = [
   		{
   			icon : 'dashboard',
@@ -21,10 +19,16 @@ class Sidebar extends Component {
   	]
   	,	arrayOptions = []
 
-  	options.forEach(function(element) {
-  		arrayOptions.push(<SidebarMenu params={element} />);
+    options.forEach(function(element) {
+      arrayOptions.push(<SidebarMenu params={element} />);
 	  // console.log(element);
-	});
+    });
+    this.state = {
+      options : arrayOptions,
+    }
+    // this.setState({
+    //   options : arrayOptions
+    // });
 
   }
 
@@ -32,19 +36,8 @@ class Sidebar extends Component {
 		return(
 				<aside>
 					<ul>
-				      <li><i class="material-icons">face</i>Dashboard</li>
-				      <li>Components</li>
-				      <li>Widgets<i className="fas fa-chevron-right flecha"></i></li>
-				        <ul className="subboton">
-				          <li>Desk</li>
-				        </ul>
-				      <li>Metrics</li>
-				      <li>Tables<i className="fas fa-chevron-right flecha"></i></li>
-				        <ul className="subboton">
-				          <li>Sales</li>
-				        </ul>
-				      <li>Timeline</li>
-				    </ul>
+              {this.state.options}
+			    </ul>
 				</aside>
 		);
   	}

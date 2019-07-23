@@ -1,6 +1,42 @@
 header{
-	width: 100%;
-    height: 60px;
+	width      : 100%;
+	height     : 60px;
+	float      : left;
+	background : #FFF;
+	box-shadow : 2px 1px 15px rgba(0,0,0,0.1);
+	position   : relative;
+}
+
+header .right{
+	float: right;
+}
+
+header .profile_details ul li{
+	list-style-type : none;
+	position        : relative;
+	margin-right    : 30px;
+}
+
+.profile_details_drop a.dropdown-toggle{
+	display: block;
+	padding: 0.2em 3em 0 0em;
+}
+
+.profile_img span.prfil-img{
+	float: left;
+}
+
+.user-name{
     float: left;
-	border-bottom :  solid 1px #d1d1d1;
+    margin-top: 8px;
+    margin-left: 11px;
+    height: 35px;
+}
+
+.profile_details li a i.fa.lnr{
+	position  : absolute;
+	top       : 34%;
+	right     : 8%;
+	color     : #333;
+	font-size : 1.6em;
 }
