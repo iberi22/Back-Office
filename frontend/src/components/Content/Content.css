@@ -3,5 +3,8 @@
 	width            : calc(100% - 151px);
 	float            : left;
 	top              : 60px;
+	left             : 150px;
 	height           : calc(100% - 60px);
+	position         : absolute;
+
 }

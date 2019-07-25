@@ -18,6 +18,15 @@ body{
   /*flex-wrap  : nowrap;*/
 }
 
+.parentContent{
+  width              : 100%;
+  height             : 100%;
+  -webkit-transition : all 1s ease;
+  -moz-transition    : 1s ease;
+  transition         : 1s ease;
+  margin: auto;
+}
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;

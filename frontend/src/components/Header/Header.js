@@ -22,7 +22,7 @@ class Header extends Component {
 
   render() {
 		return(
-				<header>
+				<header id="header">
 					<div className="left" >
 						<div className="showAside">
 							<i className="material-icons" onClick={this.showAside.bind()}>dehaze</i>

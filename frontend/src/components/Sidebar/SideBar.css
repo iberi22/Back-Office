@@ -4,8 +4,10 @@ aside{
 	height       : calc(100% - 60px);
 	background   : #222d32;
 	border-right : solid 1px #d1d1d1;
-	position     : relative;
+	position     : absolute;
 	transition   : 0.5s;
+	top:60px;
+	left: 0px;
 	/*transition: 0.8s;*/
 	/*-webkit-transition : width 0.5s;*/
 	/*transition: width 2s, height 2s, margin 2s;*/
