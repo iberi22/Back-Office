@@ -35,7 +35,7 @@ class Sidebar extends Component {
 
   render() {
 		return(
-				<aside>
+				<aside id="aside" >
 					<ul>
               {this.state.options}
 			    </ul>

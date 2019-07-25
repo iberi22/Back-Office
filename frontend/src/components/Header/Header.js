@@ -5,6 +5,19 @@ class Header extends Component {
 
   constructor(props){
   	super(props);
+
+  }
+
+  showAside =()=>{
+  	let aside = document.getElementById('aside')
+  	if (aside.style.right===0 || aside.style.right==='' || aside.style.right==="151px"){
+  		aside.style.right="0px";
+  	}
+  	else{
+  		aside.style.right="151px";
+  	}
+
+  	// console.log(aside.style.right)
   }
 
   render() {
@@ -12,7 +25,7 @@ class Header extends Component {
 				<header>
 					<div className="left" >
 						<div className="showAside">
-							<i className="material-icons">dehaze</i>
+							<i className="material-icons" onClick={this.showAside.bind()}>dehaze</i>
 						</div>
 					</div>
 					<div className="right">
