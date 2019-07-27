@@ -33,10 +33,21 @@ class Sidebar extends Component {
 
   }
 
+  hideAside= ()=>{
+    let aside = document.getElementById('aside')
+    , parentContent = document.getElementById('parentContent')    
+    aside.setAttribute("style","");
+    setTimeout(function(){ parentContent.setAttribute("style",""); },800);
+  }
+
   render() {
 		return(
 				<aside id="aside" >
+          <div className="closeAside">
+            <i className="material-icons" onClick={this.hideAside.bind()}>close</i>
+          </div>
 					<ul>
+              
               {this.state.options}
 			    </ul>
 				</aside>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import PersonIcon from '../images/img.png';
 import './Header.css';
 
 class Header extends Component {
@@ -10,15 +11,11 @@ class Header extends Component {
 
   showAside =()=>{
   	let aside = document.getElementById('aside')
-  	if (aside.style.right===0 || aside.style.right==='' || aside.style.right==="151px"){
-  		aside.style.right="0px";
-  	}
-  	else{
-  		aside.style.right="151px";
-  	}
-
-  	// console.log(aside.style.right)
+  	,	parentContent = document.getElementById('parentContent')
+  	parentContent.setAttribute("style","width: calc(100% - 50px);height: calc(100% - 50px);");
+  	aside.setAttribute("style","left:0px;");
   }
+
 
   render() {
 		return(
@@ -34,14 +31,12 @@ class Header extends Component {
 								<li className="dropdown profile_details_drop">
 									<a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
 										<div className="profile_img">
-											<span className="prfil-img"><img src="images/users.png" alt="" /> </span>
+											<div className="prfil-img"><img src="https://www.inboundcycle.com/hubfs/layout/v3/img/email/gmail-signatures/team-01/pvaldes.jpg" alt="" /></div>
 											<div className="user-name">
 												<p>Admin Name</p>
 												<span>Administrator</span>
 											</div>
-											<i className="fa fa-angle-down lnr"></i>
-											<i className="fa fa-angle-up lnr"></i>
-											<div className="clearfix"></div>
+											<i className="material-icons">keyboard_arrow_down</i>
 										</div>
 									</a>
 								</li>

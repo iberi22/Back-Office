@@ -5,12 +5,22 @@ aside{
 	background   : #222d32;
 	border-right : solid 1px #d1d1d1;
 	position     : absolute;
-	transition   : 0.5s;
-	top:60px;
-	left: 0px;
-	/*transition: 0.8s;*/
-	/*-webkit-transition : width 0.5s;*/
-	/*transition: width 2s, height 2s, margin 2s;*/
+	transition   : 0.8s ease-in;
+	top          : 60px;
+	left         : 0px;
+}
+
+aside .closeAside{
+	padding : 3px 5px 0px 0px;
+	color   : #FFF;
+	width   : 99%;
+	float   : left;
+	display : none;
+}
+
+aside .closeAside i{
+	float  : right;
+	cursor : pointer;
 }
 
 aside ul li{
@@ -61,7 +71,28 @@ aside ul li:hover .flecha{
 @media screen and (max-width: 600px) {
 
 	aside {
-		right: 151px;
+		width    : 100%;
+		height   : 100%;
+		overflow :hidden;
+		left     : -101%;
+		top      :0px;
+		/*right: 151px;*/
+	}
+
+	aside ul{
+		margin-top: 27px;
+	}
+	aside ul li{
+		font-size: 18px;
+		text-align: left;
+	}
+
+	aside ul li i{
+		padding: 0px 20px 0px 20px;
+	}
+
+	aside .closeAside{
+		display: block;
 	}
 
 	div.content{
