@@ -16,7 +16,6 @@ class Header extends Component {
   	aside.setAttribute("style","left:0px;");
   }
 
-
   render() {
 		return(
 				<header id="header">
