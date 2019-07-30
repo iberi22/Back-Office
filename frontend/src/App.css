@@ -6,7 +6,7 @@ body{
 * {
   padding     : 0px;
   margin      : 0px;
-  font-family : 'Muli', sans-serif;
+  /*font-family : 'Muli', sans-serif;*/
 }
 
 .App {
@@ -26,7 +26,7 @@ body{
   -moz-transition    : 0.2s ease;
   transition         : 0.2s ease;
   margin             : auto;
-  box-shadow : 2px 1px 15px  rgba(0,0,0,0.1);
+  box-shadow : 2px 1px 15px  rgba(6,6,6,0.66);
 }
 
 .App-logo {

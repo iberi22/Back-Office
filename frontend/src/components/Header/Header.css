@@ -12,6 +12,19 @@ header .right{
 	height : 100%;
 }
 
+header .center{
+	height   : 100%;
+	width    : 200px;
+	overflow : hidden;
+	float    : left;
+	text-align: center;
+}
+
+header .center svg, img{
+	width: 100%;
+	height: 100%;
+}
+
 header .left{
 	float  : left;
 	height : 100%;
@@ -71,6 +84,59 @@ header .left .showAside{
 	margin-top  : .3em;
 }
 
+.profile_details ul li ul.dropdown-menu.drp-mnu {
+	padding   : 1em;
+	min-width : 190px;
+	top       : 122%;
+	left      : 0%;
+	width     : 190px;
+}
+
+ul.dropdown-menu.drp-mnu li {
+    list-style-type: none;
+    padding: 3px 0;
+}
+
+ul.dropdown-menu.drp-mnu i, ul.dropdown-menu.drp-mnu a {
+    margin-right: 0.5em;
+    color: #629aa9;
+}
+
+ul.dropdown-menu.drp-mnu i{
+	display                : inline-block;
+	/*font                   : normal normal normal 14px/1 FontAwesome;*/
+	font-size              : inherit;
+	text-rendering         : auto;
+	-webkit-font-smoothing : antialiased;
+}
+
+ul.dropdown-menu li {
+	margin-left : 0;
+	width       : 100%;
+	padding     : 0;
+	background  : #fff;
+    text-align: left;
+	display: inline-block;
+}
+
+.dropdown-menu > li > a {
+    padding: 3px 15px;
+    font-size: .9em;
+    letter-spacing: .5px;
+
+}
+
+.dropdown-menu > li > a i{
+	padding: 0px;
+}
+/*
+	display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+}
+*/
 header .left .showAside i{
 	display        : table-cell;
 	vertical-align : middle;
@@ -80,6 +146,10 @@ header .left .showAside i{
 @media screen and (max-width: 600px) {
 	header .left .showAside{
 		display    : table !important;
+	}
+
+	header .center{
+		width: calc(100% - 44px - 55px)
 	}
 
 	.profile_details .user-name, .profile_details i {

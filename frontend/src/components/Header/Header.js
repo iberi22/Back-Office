@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 // import PersonIcon from '../images/img.png';
+import { ReactComponent as Logo } from '../../logo.svg';
+// import Logo from '../../logo.svg';
 import './Header.css';
 
 class Header extends Component {
@@ -24,6 +26,9 @@ class Header extends Component {
 							<i className="material-icons" onClick={this.showAside.bind()}>dehaze</i>
 						</div>
 					</div>
+					<div className="center">
+						<Logo/>
+					</div>
 					<div className="right">
 						<div className="profile_details">
 							<ul>
@@ -38,6 +43,12 @@ class Header extends Component {
 											<i className="material-icons">keyboard_arrow_down</i>
 										</div>
 									</a>
+									<ul className="dropdown-menu drp-mnu">
+										<li> <a href="#"><i className="material-icons">settings</i> Settings</a> </li> 
+										<li> <a href="#"><i className="material-icons">import_contacts</i> My Account</a> </li> 
+										<li> <a href="#"><i className="material-icons">person</i> Profile</a> </li> 
+										<li> <a href="#"><i className="material-icons">power_settings_new</i> Logout</a> </li>
+									</ul>
 								</li>
 							</ul>
 						</div>

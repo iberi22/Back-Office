@@ -21,6 +21,8 @@ aside .closeAside{
 aside .closeAside i{
 	float  : right;
 	cursor : pointer;
+	font-size: 35px;
+	padding: 10px;
 }
 
 aside ul li{
@@ -80,10 +82,10 @@ aside ul li:hover .flecha{
 	}
 
 	aside ul{
-		margin-top: 27px;
+		margin-top: 57px;
 	}
 	aside ul li{
-		font-size: 18px;
+		font-size: 21px;
 		text-align: left;
 	}
 
