@@ -50,8 +50,9 @@ header .left .showAside{
 }
 
 .profile_details .prfil-img img{
-	width  : 50px;
-	height : 50px;
+	width         : 50px;
+	height        : 50px;
+	border-radius : 50px;
 }
 
 .profile_details i{
@@ -84,39 +85,52 @@ header .left .showAside{
 	margin-top  : .3em;
 }
 
-.profile_details ul li ul.dropdown-menu.drp-mnu {
-	padding   : 1em;
-	min-width : 190px;
-	top       : 122%;
-	left      : 0%;
-	width     : 190px;
+/*.profile_details ul li ul.dropdown-menu.drp-mnu {*/
+.dropdown-menu {
+	/*padding          : 1em;*/
+	margin             : 1em;
+	min-width          : 190px;
+	top                : 122%;
+	left               : 0%;
+	width              : 190px;
+	overflow           : hidden;
+	/*transition       : all 0.5s ease-out;*/
+	transition         : max-height 1s;
+	box-shadow         : 2px 3px 4px rgba(0, 0, 0, .175);
+	-webkit-box-shadow : 2px 3px 4px rgba(0, 0, 0, .175);
+	-moz-box-shadow    : 2px 3px 4px rgba(0, 0, 0, .175);
+	border-radius      : 0;
+	max-height         : 0px;
+	/*display          : none;*/
 }
 
-ul.dropdown-menu.drp-mnu li {
-    list-style-type: none;
-    padding: 3px 0;
+/*ul.dropdown-menu{
+	transition : 0.8s;
+
+}*/
+
+.dropdown-menu li {
+	padding    : 1em;
+	list-style-type : none;
+	padding         : 7px 0;
+	margin-left     : 0;
+	width           : 100%;
+	/*padding         : 0;*/
+	background      : #fff;
+	text-align      : left;
+	display         : inline-block;
 }
 
-ul.dropdown-menu.drp-mnu i, ul.dropdown-menu.drp-mnu a {
+.dropdown-menu i, .dropdown-menu a {
     margin-right: 0.5em;
     color: #629aa9;
 }
 
-ul.dropdown-menu.drp-mnu i{
+.dropdown-menu i{
 	display                : inline-block;
-	/*font                   : normal normal normal 14px/1 FontAwesome;*/
 	font-size              : inherit;
 	text-rendering         : auto;
 	-webkit-font-smoothing : antialiased;
-}
-
-ul.dropdown-menu li {
-	margin-left : 0;
-	width       : 100%;
-	padding     : 0;
-	background  : #fff;
-    text-align: left;
-	display: inline-block;
 }
 
 .dropdown-menu > li > a {
@@ -129,14 +143,7 @@ ul.dropdown-menu li {
 .dropdown-menu > li > a i{
 	padding: 0px;
 }
-/*
-	display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-*/
+
 header .left .showAside i{
 	display        : table-cell;
 	vertical-align : middle;
@@ -154,6 +161,13 @@ header .left .showAside i{
 
 	.profile_details .user-name, .profile_details i {
 		display: none;
+	}
+
+	.dropdown-menu {
+		position : fixed;
+		top      : 60px;
+		width    : calc(100% - 30px);
+		font-size: 21px
 	}
 
 }

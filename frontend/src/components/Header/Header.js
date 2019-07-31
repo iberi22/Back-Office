@@ -18,6 +18,20 @@ class Header extends Component {
   	aside.setAttribute("style","left:0px;");
   }
 
+  showRightButton =()=>{
+	let menu  = document.getElementById('dropdown-menu')
+	,	arrow = document.getElementById('arrow')
+
+	if (menu.getAttribute("style")==="" || menu.getAttribute("style")===null ){
+		menu.setAttribute("style","max-height:500px;");
+		arrow.innerHTML = "keyboard_arrow_up";
+	}
+	else{
+  		menu.setAttribute("style","");
+		arrow.innerHTML = "keyboard_arrow_down";
+	}
+  }
+
   render() {
 		return(
 				<header id="header">
@@ -33,17 +47,17 @@ class Header extends Component {
 						<div className="profile_details">
 							<ul>
 								<li className="dropdown profile_details_drop">
-									<a href="#" className="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									<a href="#" className="dropdown-toggle" onClick={this.showRightButton.bind()} data-toggle="dropdown" aria-expanded="false">
 										<div className="profile_img">
-											<div className="prfil-img"><img src="https://www.inboundcycle.com/hubfs/layout/v3/img/email/gmail-signatures/team-01/pvaldes.jpg" alt="" /></div>
+											<div className="prfil-img"><img src="https://demo.w3layouts.com/demos_new/template_demo/06-01-2018/glance_design_dashboard-demo_Free/215073379/web/images/2.jpg" alt="" /></div>
 											<div className="user-name">
 												<p>Admin Name</p>
 												<span>Administrator</span>
 											</div>
-											<i className="material-icons">keyboard_arrow_down</i>
+											<i className="material-icons" id="arrow">keyboard_arrow_down</i>
 										</div>
 									</a>
-									<ul className="dropdown-menu drp-mnu">
+									<ul className="dropdown-menu" id="dropdown-menu">
 										<li> <a href="#"><i className="material-icons">settings</i> Settings</a> </li> 
 										<li> <a href="#"><i className="material-icons">import_contacts</i> My Account</a> </li> 
 										<li> <a href="#"><i className="material-icons">person</i> Profile</a> </li> 
